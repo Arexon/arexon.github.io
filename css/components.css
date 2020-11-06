@@ -126,11 +126,9 @@
 	background: transparent;
 	border-radius: var(--radius);
 	font-family: var(--font-secondary);
+	font-weight: 300;
 	text-decoration: none;
 	letter-spacing: 2px;
-}
-.btn:hover {
-	background: var(--color-main-3) !important;
 }
 .btn:focus {
 	transform: scale(0.9);
@@ -143,6 +141,12 @@
 .btn.color-1 {
 	color: var(--color-main-0);
 	background: var(--color-main-4);
+}
+.btn.color-2 {
+	color: var(--color-main-0);
+}
+.btn:hover {
+	background: var(--color-main-3);
 }
 
 
