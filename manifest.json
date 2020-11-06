@@ -1,0 +1,21 @@
+{
+	"short_name": "Arexon",
+	"name": "arexon.dev",
+	"description": "3D Modeler, Pixel Artist and Developer.",
+	"start_url": "index.html",
+	"background_color": "#FEF7E4",
+	"theme_color": "#FEF7E4",
+	"display": "standalone",
+	"icons": [
+		{
+			"src": "assets/icon.png",
+			"type": "image/png",
+			"sizes": "128x128"
+		},
+		{
+			"src": "assets/icon_full.png",
+			"type": "image/png",
+			"sizes": "1024x1024"
+		}
+	]
+}

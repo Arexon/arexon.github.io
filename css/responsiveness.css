@@ -1,0 +1,48 @@
+@media (min-width: 980px) {
+
+/* header */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60px;
+	transform: initial;
+}
+
+.header-nav-toggle {
+	display: none;
+}
+
+.header-nav {
+	flex-direction: row;
+	width: auto;
+	height: auto;
+}
+.header-nav-item {
+	width: auto;
+	margin: 0 0 0 24px;
+	border-bottom: initial;
+	font-size: 16px;
+}
+
+.header-nav-divider {
+	display: none;
+}
+
+.header-nav-social-icons {
+	display: none;
+}
+
+
+
+
+
+/* footer */
+.footer {
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+}
+
+}
