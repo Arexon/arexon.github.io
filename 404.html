@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Page Not Found</title>
+		<meta name="title" content="Page Not Found">
+		<meta name="description" content="3D Modeler, Pixel Artist and Developer.">
+		<meta charset="utf-8">
+		<meta name="theme-color" content="#DACF7F">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/reset.css" rel="stylesheet" type="text/css">
+		<link href="css/variables.css" rel="stylesheet" type="text/css">
+		<link href="css/typography.css" rel="stylesheet" type="text/css">
+		<link href="css/components.css" rel="stylesheet" type="text/css">
+		<link href="css/layouts.css" rel="stylesheet" type="text/css">
+		<link href="css/responsiveness.css" rel="stylesheet" type="text/css">
+		<link href="css/404.css" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<link href="assets/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+	</head>
+	<body>
+
+		<!-- loader -->
+		<div class="loader">
+			<svg class="loader-logo"><use href="#logo"></svg>
+		</div>
+
+		<!-- main -->
+		<main class="main">
+			<!-- header -->
+			<header class="header">
+				<a class="header-logo-con" href="https://arexon.dev" title="arexon.dev">
+					<svg class="header-logo"><use href="#logo"></svg>
+				</a>
+			</header>
+
+			<!-- 404 -->
+			<div class="page-404">
+				<div>
+					<span class="page-404-subtitle">ERROR 404</span>
+					<hr class="page-404-divider divider">
+					<h1 class="page-404-title">ooops! something<br>went wrong<h1>
+					<a class="btn color-2" href="https://arexon.dev" title="Return to home page">Return Home →</a>
+				</div>
+			</div>
+		</main>
+
+		<!-- svg sprite sheet -->
+		<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+			<symbol id="logo" viewBox="0 0 2016 480">
+				<title>Logo</title>
+				<g transform="translate(0, 480) scale(0.1, -0.1)"><path d="M1440 3840 l0 -480 -480 0 -480 0 0 -1440 0 -1440 1680 0 1680 0 0 480 0 480 -240 0 -240 0 0 1440 0 1440 -960 0 -960 0 0 -480z m960 -1680 l0 -1200 -480 0 -480 0 0 1200 0 1200 480 0 480 0 0 -1200z"/><path d="M4320 2400 l0 -1920 480 0 480 0 0 1440 0 1440 480 0 480 0 0 480 0 480 -960 0 -960 0 0 -1920z"/><path d="M6720 2400 l0 -1920 1440 0 1440 0 0 480 0 480 -480 0 -480 0 0 -240 0 -240 -480 0 -480 0 0 480 0 480 960 0 960 0 0 720 0 720 -480 0 -480 0 0 480 0 480 -960 0 -960 0 0 -1920z m1920 480 l0 -480 -480 0 -480 0 0 480 0 480 480 0 480 0 0 -480z"/><path d="M10080 3600 l0 -720 240 0 240 0 0 -480 0 -480 -240 0 -240 0 0 -720 0 -720 480 0 480 0 0 720 0 720 480 0 480 0 0 -720 0 -720 480 0 480 0 0 720 0 720 -240 0 -240 0 0 480 0 480 240 0 240 0 0 720 0 720 -480 0 -480 0 0 -720 0 -720 -480 0 -480 0 0 720 0 720 -480 0 -480 0 0 -720z"/><path d="M14400 3840 l0 -480 -480 0 -480 0 0 -1440 0 -1440 1440 0 1440 0 0 1920 0 1920 -960 0 -960 0 0 -480z m960 -1680 l0 -1200 -480 0 -480 0 0 1200 0 1200 480 0 480 0 0 -1200z"/><path d="M16800 2400 l0 -1920 480 0 480 0 0 1200 0 1200 480 0 480 0 0 -1200 0 -1200 480 0 480 0 0 1680 0 1680 -960 0 -960 0 0 240 0 240 -480 0 -480 0 0 -1920z"/></g>
+			</symbol>
+		</svg>
+
+		<script>
+			window.addEventListener('load', function() {
+				setTimeout(function() {
+					document.querySelector('.loader').remove();
+				}, 1000);
+			});
+		</script>
+
+	</body>
+</html>
