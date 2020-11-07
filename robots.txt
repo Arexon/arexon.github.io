@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /js/
-
-Sitemap: https://arexon.dev/sitemap.xml
