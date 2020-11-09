@@ -3,22 +3,18 @@
 	<url>
 		<loc>https://arexon.dev</loc>
 		<changefreq>daily</changefreq>
-		<lastmod>2020-11-07</lastmod>
 		<priority>0.7</priority>
 	</url>
 	<url>
 		<loc>https://arexon.dev/portfolio</loc>
 		<changefreq>daily</changefreq>
-		<lastmod>2020-11-07</lastmod>
 	</url>
 	<url>
 		<loc>https://arexon.dev/add-ons</loc>
 		<changefreq>daily</changefreq>
-		<lastmod>2020-11-07</lastmod>
 	</url>
 	<url>
 		<loc>https://arexon.dev/about-me</loc>
 		<changefreq>daily</changefreq>
-		<lastmod>2020-11-07</lastmod>
 	</url>
 </urlset>
