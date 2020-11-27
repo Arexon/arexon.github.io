@@ -1,0 +1,146 @@
+/* Setup */
+html, body {
+	width: 100%;
+	height: 100%;
+	scroll-behavior: smooth;
+	overflow: hidden;
+}
+
+body {
+	display: grid;
+	grid-template: 100% / 100%;
+	background: var(--color-neutral-6);
+}
+
+
+
+
+/* General styles */
+
+/* Figure */
+figure {
+	margin: var(--space-1) 0;
+}
+figcaption {
+	color: var(--color-neutral-3);
+	font-size: 12px;
+	text-align: center;
+	line-height: 1.5;
+}
+
+
+/* Images */
+img {
+	width: 100%;
+	height: auto;
+	background: var(--color-neutral-1);
+	border-radius: var(--radius-0);
+}
+
+
+/* Icons */
+.iconMenu {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 32px;
+	height: 32px;
+}
+.iconMenu::after, .iconMenu::before {
+	content: '';
+	position: absolute;
+	width: 32px;
+	height: 2px;
+	background: var(--color-neutral-0);
+	transition: transform .25s var(--curve-circ);
+}
+.iconMenu::after {
+	transform: translateY(6px);
+}
+.iconMenu::before {
+	transform: translateY(-6px);
+}
+.iconMenu.is-open::after, .iconMenu.is-open::before {
+	transform: translateY(0);
+}
+
+
+
+
+/* Layout presets */
+.layout-0 { /* Centers child elements horizontally */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.layout-1 { /* Centers child elements veritcally */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.grid-0 { /* Places grid items horizontally */
+	grid-auto-flow: column;
+	max-width: 0;
+}
+
+.wrapper {
+	max-width: 560px;
+	height: 100%;
+	margin: 0 auto;
+	padding: var(--space-2) var(--space-3);
+}
+
+
+
+
+/* Miscellaneous */
+.hide {
+	display: none;
+}
+
+
+
+
+/* Responsiveness */
+@media screen and (min-width: 980px), (orientation: landscape) {
+
+	/* Header */
+	.header--logo {
+		grid-row: 1 / 2;
+		grid-column: 1 / 2;
+	}
+
+	.header--navToggle {
+		display: none;
+	}
+
+	.header--nav {
+		grid-row: 1 / 2;
+		grid-column: 2 / 3;
+		justify-self: end;
+		display: grid;
+		grid-auto-flow: column;
+		grid-column-gap: var(--space-2);
+		align-items: center;
+		height: 100%;
+		opacity: 1;
+	}
+	.header--nav--item {
+		font-size: var(--size-1);
+	}
+
+	.header--socialLinks {
+		display: none;
+	}
+
+
+	/* Main */
+	.main {
+		opacity: 1 !important;
+		transform: translate(0) !important;
+	}
+
+}
