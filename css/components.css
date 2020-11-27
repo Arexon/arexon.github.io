@@ -7,9 +7,16 @@
 	text-transform: uppercase;
 	text-decoration: none !important;
 }
+
 [class^='button-'] {
 	padding: var(--space-0) var(--space-2);
-	transition: box-shadow .8s var(--curve-quart);
+	transition: box-shadow .8s var(--curve-quart), transform .4s var(--curve-quart);
+}
+[class^='button-']:hover {
+	box-shadow: 6px 0 26px -6px var(--color-neutral-6);
+}
+[class^='button-']:focus {
+	transform: scale(0.9);
 }
 
 .button-0 {
@@ -19,9 +26,6 @@
 .button-1 {
 	background: var(--color-neutral-6);
 	color: var(--color-neutral-0);
-}
-.button-1:hover {
-	box-shadow: 6px 0 26px -6px var(--color-neutral-6);
 }
 
 
