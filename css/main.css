@@ -87,6 +87,7 @@ img {
 }
 
 .wrapper {
+	display: grid;
 	max-width: 560px;
 	height: 100%;
 	margin: 0 auto;
