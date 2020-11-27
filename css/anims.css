@@ -1,0 +1,23 @@
+@keyframes loaderSlideOut {
+	99% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		display: none;
+		transform: translateY(100%);
+		opacity: .5;
+	}
+}
+@keyframes loaderSlideIn {
+	0% {
+		display: block;
+		transform: translateY(-100%);
+		opacity: .5;
+	}
+	100% {
+		display: block;
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
