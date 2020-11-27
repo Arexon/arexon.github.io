@@ -171,7 +171,7 @@
 	border-radius: var(--radius-0) var(--radius-0) 0 0;
 	background: var(--color-neutral-0);
 	transition: transform .6s var(--curve-circ), opacity .6s var(--curve-circ);
-	overflow-y: scroll;
+	overflow: hidden scroll;
 	z-index: 1;
 }
 .main.is-close {
