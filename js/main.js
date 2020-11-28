@@ -1,5 +1,18 @@
+// Setup
+var query = query => {
+	return document.querySelector(query);
+}
+var queryAll = query => {
+	return document.querySelectorAll(query);
+}
+
+body = document.body;
+
+
+
+
 // Page transition
-var loader = document.querySelector('#loader');
+const loader = query('#loader');
 
 
 // On enter/exit
@@ -15,11 +28,11 @@ window.addEventListener('load', enter);
 
 
 
-// Delay
-var links = document.querySelectorAll('a:not([download])');
+// Link click delay
+const links = queryAll('a:not([download])');
 
 links.forEach(function(link) {
-	link.onclick = (e) => {
+	link.onclick = e => {
 		let linkURL = link.getAttribute('href');
 		e.preventDefault();
 		setTimeout(() => {
@@ -32,13 +45,55 @@ links.forEach(function(link) {
 
 
 
+// Image lightbox
+if (body.classList.contains('gallery')) {
+	const lightbox = document.createElement('div');
+	body.appendChild(lightbox);
+	lightbox.classList.add('lightbox', 'layout-0');
+
+
+	const images = queryAll('.galleryImage');
+
+	images.forEach(image => {
+		image.onclick = e => {
+			const lightboxImage = document.createElement('img');
+
+			while (lightbox.firstChild) {
+				lightbox.removeChild(lightbox.firstChild);
+			};
+
+			lightbox.appendChild(lightboxImage);
+			lightboxImage.classList.add('lightboxImage');
+			lightboxImage.src = image.src;
+			lightbox.classList.add('is-open');
+
+			setTimeout(() => {
+				lightbox.classList.add('fadeIn');
+				lightboxImage.classList.add('fadeIn');
+			}, 20);
+
+			lightbox.addEventListener('click', e => {
+				if (e.target !== e.currentTarget) return
+				lightbox.classList.remove('fadeIn');
+				lightboxImage.classList.remove('fadeIn');
+				setTimeout(() => {
+					lightbox.classList.remove('is-open');
+				}, 250);
+			});
+		};
+	});
+}
+
+
+
+
+
 // Navigation
-var navToggle = document.querySelector('#navToggle');
-var main = document.querySelector('#main');
+const navToggle = query('#navToggle');
 
 function nav() {
-	let iconMenu = document.querySelector('#iconMenu');
-	let main = document.querySelector('#main');
+	let iconMenu = query('#iconMenu');
+	let main = query('#main');
 
 	iconMenu.classList.toggle('is-open');
 	main.classList.toggle('is-close');
