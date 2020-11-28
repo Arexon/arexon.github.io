@@ -1,0 +1,50 @@
+@media screen and (min-width: 980px) {
+	/* Layout presets */
+	.grid-1 { /* Places items in a responsive grid */
+		margin: 0 var(--space-2);
+	}
+
+
+	/* Header */
+	.header--logo {
+		grid-row: 1 / 2;
+		grid-column: 1 / 2;
+	}
+
+	.header--navToggle {
+		display: none;
+	}
+
+	.header--nav {
+		grid-row: 1 / 2;
+		grid-column: 2 / 3;
+		justify-self: end;
+		display: grid;
+		grid-auto-flow: column;
+		grid-column-gap: var(--space-2);
+		align-items: center;
+		height: 100%;
+		opacity: 1;
+	}
+	.header--nav--item {
+		font-size: var(--size-1);
+	}
+
+	.header--socialLinks {
+		display: none;
+	}
+
+
+	/* Main */
+	.main {
+		opacity: 1 !important;
+		transform: translate(0) !important;
+	}
+
+
+	/* Lightbox */
+	.lightbox {
+		padding: var(--space-4);
+	}
+
+}
