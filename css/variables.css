@@ -2,9 +2,13 @@
 	/* Color palette */
 	--color-primary-0: #43c495;
 	--color-primary-1: #3a7c95;
+	--color-primary-2: #313c78;
+	--color-primary-3: #3e1d45;
 
 	--color-secondary-0: #e6553c;
 	--color-secondary-1: #a83242;
+	--color-secondary-2: #7d2727;
+	--color-secondary-3: #401322;
 
 	--color-accent-0: #f0e8c0;
 	--color-accent-1: #402932;
