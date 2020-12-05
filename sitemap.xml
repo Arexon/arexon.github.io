@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
+
 	<url>
 		<loc>https://arexon.dev</loc>
 		<changefreq>daily</changefreq>
 	</url>
+
 	<url>
 		<loc>https://arexon.dev/gallery</loc>
 		<changefreq>daily</changefreq>
 	</url>
+
 	<url>
-		<loc>https://arexon.dev/content</loc>
+		<loc>https://arexon.dev/add-ons</loc>
 		<changefreq>daily</changefreq>
 	</url>
+	<url>
+		<loc>https://arexon.dev/add-ons/wheelscraft</loc>
+		<changefreq>daily</changefreq>
+	</url>
+
 	<url>
 		<loc>https://arexon.dev/about-me</loc>
 		<changefreq>daily</changefreq>
 	</url>
+
 </urlset>
