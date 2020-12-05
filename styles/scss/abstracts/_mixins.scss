@@ -1,0 +1,50 @@
+/* Layout */
+@mixin flex($justify: normal, $align: normal, $direction: row) {
+	display: flex;
+
+	justify-content: $justify;
+	align-items: $align;
+	flex-direction: $direction;
+}
+
+
+@mixin box($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+
+
+
+/* Media queries */
+@mixin desktopScreen {
+	@media screen and (min-width: 980px) {
+		@content;
+	}
+}
+
+
+
+
+/* Icon */
+@mixin icon($width, $height) {
+	width: $width;
+	height: $height;
+	@include flex(center, center);
+}
+
+
+
+
+/* Typography */
+@mixin font($size, $weight, $style: normal) {
+	font-size: $size;
+	font-weight: $weight;
+	font-style: $style;
+}
+
+
+@mixin noSelection {
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}

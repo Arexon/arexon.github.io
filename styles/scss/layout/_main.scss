@@ -1,0 +1,25 @@
+.main {
+	grid-area: 1 / 1 / 2 / 2;
+	margin-top: 60px;
+	border-radius: $radius-0 $radius-0 0 0;
+	background: $color-neutral-0;
+	transition: transform .6s $curve-circ, opacity .6s $curve-circ;
+	overflow: hidden scroll;
+	z-index: 1;
+	@include flex($direction: column);
+	@include box(100%, calc(100% - 60px));
+
+	&.is-close {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+
+	& * { /* Stops the container items from shrinking */
+		flex-shrink: 0;
+	}
+
+	@include desktopScreen {
+		opacity: 1 !important;
+		transform: translate(0) !important;
+	}
+}

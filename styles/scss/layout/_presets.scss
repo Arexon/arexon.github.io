@@ -1,0 +1,26 @@
+.grid-0 { /* Places grid items horizontally */
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: $space-1;
+	max-width: 0;
+}
+
+.grid-1 { /* Places items in a responsive grid */
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-auto-rows: auto;
+	align-content: start;
+	gap: $space-1;
+	margin: 0 $space-1;
+
+	@include desktopScreen {
+		margin: 0 $space-2;
+	}
+}
+
+.wrapper { /* Main content wrapper */
+	display: grid;
+	max-width: 560px;
+	margin: 0 auto;
+	padding: $space-2 $space-3 0 $space-3;
+}

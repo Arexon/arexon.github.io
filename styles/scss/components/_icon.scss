@@ -1,0 +1,24 @@
+/* Menu icon */
+.iconMenu {
+	position: relative;
+	@include flex(center, center, column);
+	@include box(32px, 32px);
+
+	&::after, &::before {
+		content: '';
+		position: absolute;
+		width: 32px;
+		height: 2px;
+		background: $color-neutral-0;
+		transition: transform .25s $curve-circ;
+	}
+	&::after {
+		transform: translateY(6px);
+	}
+	&::before {
+		transform: translateY(-6px);
+	}
+	&.is-open::after, &.is-open::before {
+		transform: translateY(0);
+	}
+}

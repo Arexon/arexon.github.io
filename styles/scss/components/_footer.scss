@@ -1,0 +1,10 @@
+.footer {
+	position: relative;
+	margin-top: auto;
+	padding: 0 $space-2;
+	color: $color-neutral-3;
+	font-size: $size-1;
+	@include flex(space-between, center);
+	@include box(100%, 60px);
+	@include noSelection;
+}
