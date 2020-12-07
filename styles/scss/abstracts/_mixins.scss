@@ -14,12 +14,40 @@
 }
 
 
+@mixin overlay(
+	$top: 0,
+	$right: 0,
+	$bottom: 0,
+	$left: 0,
+	$overlay: false
+) {
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+
+	@if $overlay == true {
+		content: '';
+		position: absolute;
+	}
+}
 
 
-/* Media queries */
-@mixin desktopScreen {
-	@media screen and (min-width: 980px) {
-		@content;
+
+
+/* Color */
+@mixin monotone($color1, $color2) {
+	&::before {
+		background: $color1;
+		mix-blend-mode: darken;
+		@include overlay($overlay: true);
+		@include box(100%);
+	}
+	&::after {
+		background: $color2;
+		mix-blend-mode: lighten;
+		@include overlay($overlay: true);
+		@include box(100%);
 	}
 }
 
@@ -47,4 +75,14 @@
 @mixin noSelection {
 	user-select: none;
 	-webkit-tap-highlight-color: transparent;
+}
+
+
+
+
+/* Media queries */
+@mixin desktopScreen {
+	@media screen and (min-width: 980px) {
+		@content;
+	}
 }
