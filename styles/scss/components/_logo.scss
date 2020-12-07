@@ -1,6 +1,5 @@
 .logo {
-	@include flex(center, center);
-	@include box(132px, 24px);
+	@include vector(132px, 24px);
 
 	&:hover * {
 		fill: $color-secondary-1;

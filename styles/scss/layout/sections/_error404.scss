@@ -13,19 +13,17 @@
 	@include box(100%, 600px);
 
 	&--watermark {
-		position: absolute;
-		bottom: -12px;
-		right: 0;
 		background: $color-accent-0;
 		transform: rotate(22.5deg);
 		transform-origin: 100% 100%;
 		clip-path: polygon(100% 0, 100% 100%, 0 100%);
 		z-index: -1;
+		@include overlay(true, auto, 0, $space-1, auto);
 		@include box(350px);
 	}
 
 	&--image {
-		background: 50% / 100% no-repeat url('/assets/404.png');
+		background: url('/assets/404.png') 50% / 100% no-repeat;
 		@include box(100%);
 	}
 

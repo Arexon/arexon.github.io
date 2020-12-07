@@ -9,9 +9,13 @@
 	@include box(100%);
 	@include noSelection;
 
+	@include desktopScreen {
+		padding: 0 $space-4;
+	}
+
 	&--logo {
 		grid-column: 1 / 2;
-
+		
 		@include desktopScreen {
 			grid-area: 1 / 1 / 2 / 2;
 		}
@@ -20,7 +24,7 @@
 	&--navToggle {
 		grid-column: 2 / 3;
 		justify-self: end;
-
+		
 		@include desktopScreen {
 			display: none;
 		}
@@ -41,7 +45,7 @@
 			&:hover, &.is-active {
 				color: $color-secondary-1;
 			}
-
+			
 			@include desktopScreen {
 				font-size: $size-1;
 			}

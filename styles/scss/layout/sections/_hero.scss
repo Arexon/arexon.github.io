@@ -1,0 +1,37 @@
+.sectionHero {
+	margin: 0;
+	box-sizing: content-box;
+	background: $color-secondary-1 url('/assets/hero.png') center / 400px no-repeat;
+	overflow: hidden scroll;
+	@include flex(center, center, column);
+	@include box(100%);
+
+	&--text {
+		position: relative;
+		color: $color-accent-0;
+		font-size: 64px;
+		text-transform: capitalize;
+		line-height: 1;
+
+		&::after {
+			border-radius: 50%;
+			background: $color-secondary-1;
+			transform: translate(120px, 160px);
+			mix-blend-mode: screen;
+			@include overlay(true, auto, 0, 0, auto);
+			@include box(128px);
+		}
+		&::before {
+			border-radius: $radius-0;
+			background: $color-secondary-3;
+			transform: translate(-120px, -120px);
+			mix-blend-mode: screen;
+			@include overlay(true, auto, auto, auto, 0);
+			@include box(256px);
+		}
+	}
+
+	&--cta {
+		margin-top: 110px;
+	}
+}

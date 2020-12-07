@@ -15,21 +15,21 @@
 
 
 @mixin overlay(
+	$overlay: false,
 	$top: 0,
 	$right: 0,
 	$bottom: 0,
-	$left: 0,
-	$overlay: false
+	$left: 0
 ) {
-	top: $top;
-	right: $right;
-	bottom: $bottom;
-	left: $left;
-
 	@if $overlay == true {
 		content: '';
 		position: absolute;
 	}
+
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
 }
 
 
@@ -54,8 +54,8 @@
 
 
 
-/* Icon */
-@mixin icon($width, $height) {
+/* Vector */
+@mixin vector($width, $height: $width) {
 	width: $width;
 	height: $height;
 	@include flex(center, center);

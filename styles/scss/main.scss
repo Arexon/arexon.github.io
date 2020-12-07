@@ -9,17 +9,6 @@
 @import './base/typography';
 
 
-/* Layout */
-@import './layout/utilities';
-@import './layout/presets';
-@import './layout/header';
-@import './layout/main';
-
-@import './layout/sections/error404';
-@import './layout/sections/banner';
-@import './layout/sections/cards';
-
-
 /* Components */
 @import './components/button';
 @import './components/divider';
@@ -29,3 +18,15 @@
 @import './components/loader';
 @import './components/lightbox';
 @import './components/footer';
+
+
+/* Layout */
+@import './layout/utilities';
+@import './layout/presets';
+@import './layout/header';
+@import './layout/main';
+
+@import './layout/sections/hero';
+@import './layout/sections/banner';
+@import './layout/sections/cards';
+@import './layout/sections/error404';

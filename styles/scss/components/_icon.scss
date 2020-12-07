@@ -5,12 +5,10 @@
 	@include box(32px, 32px);
 
 	&::after, &::before {
-		content: '';
-		position: absolute;
-		width: 32px;
-		height: 2px;
 		background: $color-neutral-0;
 		transition: transform .25s $curve-circ;
+		@include overlay(true, auto, auto, auto, auto);
+		@include box(32px, 2px);
 	}
 	&::after {
 		transform: translateY(6px);

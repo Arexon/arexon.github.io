@@ -21,7 +21,7 @@
 	&--icon {
 		margin-bottom: $space-1;
 		fill: currentColor;
-		@include icon(48px, 48px);
+		@include vector(48px);
 	}
 
 	&--text {
