@@ -6,6 +6,12 @@
 	@include flex(center, center, column);
 	@include box(100%);
 
+	@include desktopScreen(landscape) {
+		&--con {
+			@include flex(center, flex-end, row);
+		}
+	}
+
 	&--text {
 		position: relative;
 		color: $color-accent-0;
@@ -20,6 +26,11 @@
 			mix-blend-mode: screen;
 			@include overlay(true, auto, 0, 0, auto);
 			@include box(128px);
+
+			@include desktopScreen(landscape) {
+				@include overlay(true, 0, 0, auto, auto);
+				transform: translate(245px, -120px);
+			}
 		}
 		&::before {
 			border-radius: $radius-0;
@@ -33,5 +44,10 @@
 
 	&--cta {
 		margin-top: 110px;
+
+		@include desktopScreen(landscape) {
+			margin-top: 0;
+			margin-left: $space-3;
+		}
 	}
 }

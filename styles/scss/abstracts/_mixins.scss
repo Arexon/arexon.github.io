@@ -81,8 +81,14 @@
 
 
 /* Media queries */
-@mixin desktopScreen {
-	@media screen and (min-width: 980px) {
-		@content;
+@mixin desktopScreen($orientation: portrait) {
+	@if $orientation == portrait {
+		@media screen and (min-width: 980px) {
+			@content;
+		}
+	} @else {
+		@media screen and (min-width: 980px), (orientation: landscape) {
+			@content;
+		}
 	}
 }

@@ -50,9 +50,11 @@ const navToggle = query('#navToggle');
 const nav = () => {
 	const iconMenu = query('#iconMenu');
 	const main = query('#main');
+	const header = query('#header');
 
 	iconMenu.classList.toggle('is-open');
 	main.classList.toggle('is-close');
+	header.classList.toggle('is-open');
 };
 
 navToggle.addEventListener('click', nav);
