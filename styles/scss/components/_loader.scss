@@ -1,0 +1,45 @@
+@keyframes loaderSlideOut {
+	99% {
+		transform: translateY(100%);
+		opacity: 0;
+	}
+	100% {
+		display: none;
+		transform: translateY(100%);
+		opacity: .5;
+	}
+}
+@keyframes loaderSlideIn {
+	0% {
+		display: block;
+		transform: translateY(-100%);
+		opacity: .5;
+	}
+	100% {
+		display: block;
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
+.loader {
+	position: absolute;
+	background: $color-neutral-6;
+	overflow: scroll;
+	z-index: 5;
+	@include flex(center, center);
+	@include box(100%);
+
+	&.is-slideOut {
+		animation: loaderSlideOut .6s .6s $curve-circ forwards;
+	}
+	&.is-slideIn {
+		animation: loaderSlideIn .6s $curve-circ forwards;
+	}
+
+	&--logo {
+		width: 220px;
+		fill: $color-accent-0;
+	}
+}

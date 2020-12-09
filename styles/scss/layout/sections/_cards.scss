@@ -1,0 +1,30 @@
+.sectionCards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-auto-rows: 256px;
+	gap: $space-1;
+
+	&--item {
+		padding: $space-2;
+		border-radius: $radius-1;
+		transition: background .25s $curve-quart, color .25s $curve-quart;
+		background: $color-neutral-1;
+		text-align: center;
+		@include flex(center, center, column);
+
+		&:hover {
+			background: $color-accent-0;
+			color: $color-primary-2;
+		}
+	}
+
+	&--icon {
+		margin-bottom: $space-1;
+		fill: currentColor;
+		@include vector(48px);
+	}
+
+	&--text {
+		color: inherit;
+	}
+}

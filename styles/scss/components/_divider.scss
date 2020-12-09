@@ -1,0 +1,31 @@
+[class^="divider-"] {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+
+	&.light {
+		height: 1px;
+		background: $color-neutral-2;
+	}
+	&.dark {
+		height: 1px;
+		background: $color-neutral-4;
+	}
+}
+
+.divider-0 {
+	margin-top: $space-1;
+	margin-bottom: $space-1;
+}
+.divider-1 {
+	margin-top: $space-2;
+	margin-bottom: $space-2;
+}
+.divider-2 {
+	margin-top: $space-3;
+	margin-bottom: $space-3;
+}
+.divider-3 {
+	margin-top: $space-4;
+	margin-bottom: $space-4;
+}

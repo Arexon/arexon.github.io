@@ -1,0 +1,44 @@
+/* Setup */
+html, body {
+	scroll-behavior: smooth;
+	overflow: hidden;
+	@include box(100%);
+}
+
+body {
+	display: grid;
+	grid-template: 100% / 100%;
+	background: $color-neutral-6;
+}
+
+section {
+	margin: $space-2 0;
+}
+
+
+
+
+/* General styles */
+
+/* Figure */
+figure {
+	margin: $space-1 0;
+}
+
+figcaption {
+	color: $color-neutral-3;
+	text-align: center;
+	line-height: 1.5;
+	@include font($size-0, 400);
+}
+
+
+/* Images */
+img {
+	background: $color-neutral-1;
+	border-radius: $radius-0;
+	@include box(100%, auto);
+}
+.image {
+	margin: $space-2 0;
+}

@@ -1,0 +1,52 @@
+/* Color palette */
+$color-primary-0: #7af58d;
+$color-primary-1: #43c495;
+$color-primary-2: #3a7c95;
+$color-primary-3: #313c78;
+$color-primary-4: #3e1d45;
+
+$color-secondary-0: #ff9982;
+$color-secondary-1: #e6553c;
+$color-secondary-2: #a83242;
+$color-secondary-3: #7d2727;
+$color-secondary-4: #401322;
+
+$color-accent-0: #f0e8c0;
+$color-accent-1: #402932;
+
+$color-neutral-0: #fffff5;
+$color-neutral-1: #f0efeb;
+$color-neutral-2: #cccac6;
+$color-neutral-3: #a19c97;
+$color-neutral-4: #706966;
+$color-neutral-5: #403d3c;
+$color-neutral-6: #211f1f;
+
+
+/* Box-model */
+$radius-0: 12px;
+$radius-1: 24px;
+
+$space-0: 6px;
+$space-1: 12px;
+$space-2: 24px;
+$space-3: 48px;
+$space-4: 96px;
+
+$size-0: 12px;
+$size-1: 14px;
+$size-2: 16px;
+$size-3: 20px;
+$size-4: 24px;
+$size-5: 32px;
+$size-6: 48px;
+$size-7: 56px;
+
+
+/* Fonts */
+$font-stack: 'Poppins', sans-serif;
+
+
+/* Transitions */
+$curve-circ: cubic-bezier(.8, 0, .2, 1);
+$curve-quart: cubic-bezier(.76, 0, .24, 1);

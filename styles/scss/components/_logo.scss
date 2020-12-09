@@ -1,0 +1,12 @@
+.logo {
+	@include vector(132px, 24px);
+
+	&:hover * {
+		fill: $color-secondary-1;
+	}
+
+	&--item {
+		fill: $color-primary-1;
+		@include box(inherit);
+	}
+}

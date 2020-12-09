@@ -1,0 +1,32 @@
+.lightbox {
+	position: fixed;
+	background: rgba(33, 31, 31, 0);
+	transition: background .25s linear;
+	overflow: scroll;
+	z-index: 2;
+	@include box(100%);
+	@include flex(center, center);
+	display: none;
+
+	&.is-open {
+		display: flex;
+	}
+	&.is-fadeIn {
+		background: rgba(33, 31, 31, .85);
+	}
+
+	@include desktopScreen {
+		padding: $space-4;
+	}
+}
+
+.lightboxImage {
+	border-radius: 0;
+	transition: transform .25s $curve-quart;
+	transform: scale(0);
+	@include box(100%, auto);
+
+	&.is-fadeIn {
+		transform: scale(1);
+	}
+}

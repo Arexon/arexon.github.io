@@ -1,42 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Home - Arexon</title>
-
+		<title>Homepage - Arexon</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="theme-color" content="#211f1f">
 
-		<meta name="title" content="Home - Arexon">
-		<meta name="description" content="Lowpoly 3D Artist, Pixel Artist, Developer.">
+		<meta name="title" content="Homepage - Arexon">
+		<meta name="description" content="Lowpoly 3D Artist, Pixel Artist, and Developer creating Minecraft content.">
 		<meta name="keywords" content="arexon, wheelscraft, arexon dev, arexon addons, 3d models, lowpoly">
 		<meta property="og:url" content="https://arexon.dev">
-		<meta property="og:title" content="Home - Arexon">
-		<meta property="og:description" content="Lowpoly 3D Artist, Pixel Artist, Developer.">
+		<meta property="og:title" content="Homepage - Arexon">
+		<meta property="og:description" content="Lowpoly 3D Artist, Pixel Artist, and Developer creating Minecraft content.">
 		<meta property="og:image" content="https://raw.githubusercontent.com/arexon/arexon.github.io/main/assets/thumbnail.png">
 		<meta property="twitter:card" content="summary_large_image">
 		<meta property="twitter:image" content="https://raw.githubusercontent.com/arexon/arexon.github.io/main/assets/thumbnail.png">
 
-		<link rel="icon" href="/favicon.ico">
+		<meta name="theme-color" content="#211f1f">
 		<link rel="manifest" href="/manifest.json">
-		<link rel="stylesheet" href="/css/reset.css">
-		<link rel="stylesheet" href="/css/variables.css">
-		<link rel="stylesheet" href="/css/anims.css">
-		<link rel="stylesheet" href="/css/typography.css">
-		<link rel="stylesheet" href="/css/layouts.css">
-		<link rel="stylesheet" href="/css/components.css">
-		<link rel="stylesheet" href="/css/main.css">
-		<link rel="stylesheet" href="/css/responsiveness.css">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#43c495">
 
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
-
-		<script defer src="/js/main.js"></script>
+		<link rel="stylesheet" href="/styles/css/main.css">
+		<script defer src="/scripts/main.js"></script>
 	</head>
 	<body>
 		<!-- Header -->
-		<header class="header x-highlight">
-			<a class="logo header--logo layout-0" href="/" title="Go to Homepage">
+		<header class="header" id="header">
+			<a class="logo header--logo" href="/" title="Go to Homepage">
 				<svg class="logo--item"><use href="#logo"></svg>
 			</a>
 			<button class="header--navToggle" id="navToggle" role="button">
@@ -44,11 +36,11 @@
 			</button>
 			<nav class="header--nav">
 				<a class="header--nav--item is-active x-underline" href="/" title="Home">Home</a>
-				<a class="header--nav--item x-underline" href="/gallery" title="Gallery">Gallery</a>
-				<a class="header--nav--item x-underline" href="/add-ons" title="Add-ons">Add-ons</a>
-				<a class="header--nav--item x-underline" href="/about-me" title="About me">About me</a>
+				<a class="header--nav--item x-underline" href="/gallery.html" title="Gallery">Gallery</a>
+				<a class="header--nav--item x-underline" href="/add-ons.html" title="Add-ons">Add-ons</a>
+				<a class="header--nav--item x-underline" href="/about-me.html" title="About me">About me</a>
 			</nav>
-			<div class="socialLinks header--socialLinks grid-0 link">
+			<div class="header--socialLinks grid-0 link">
 				<a href="https://twitter.com/thearexon" title="Twitter">Twitter</a>
 				<a href="https://github.com/arexon" title="GitHub">GitHub</a>
 				<a href="https://sketchfab.com/arexon" title="Sketchfab">Sketchfab</a>
@@ -57,19 +49,23 @@
 
 		<!-- Main -->
 		<main class="main" id="main">
-			<!-- Footer -->
-			<footer class="footer x-highlight">
-				<div class="socialLinks grid-0">
-					<a href="https://twitter.com/thearexon" title="Twitter">Twitter</a>
-					<a href="https://github.com/arexon" title="GitHub">GitHub</a>
-					<a href="https://sketchfab.com/arexon" title="Sketchfab">Sketchfab</a>
+			<!-- Hero section -->
+			<section class="sectionHero">
+				<div class="sectionHero--con">
+					<h1 class="sectionHero--text">
+						Creating<br>
+						unique<br>
+						content
+					</h1>
+					<hr class="divider-1">
+					<a class="button-1 sectionHero--cta" href="add-ons.html" title="Browse Minecraft add-ons" role="button">Browse add-ons</a>
+					<a class="button-2 sectionHero--cta" href="gallery.html" title="View 3d models gallery" role="button">See gallery</a>
 				</div>
-				<p>© 2020 Arexon</p>
-			</footer>
+			</section>
 		</main>
 
 		<!-- Loader -->
-		<div class="loader layout-0" id="loader">
+		<div class="loader" id="loader">
 			<svg class="loader--logo"><use href="#logo"></svg>
 		</div>
 

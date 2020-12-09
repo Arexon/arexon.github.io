@@ -1,0 +1,33 @@
+.error404.wrapper {
+	height: 100%;
+}
+
+.sectionError {
+	position: relative;
+	display: grid;
+	grid-template-rows: 1fr auto 50px;
+	justify-items: start;
+	align-items: start;
+	gap: $space-1 0;
+	margin: auto 0;
+	@include box(100%, 600px);
+
+	&--watermark {
+		background: $color-accent-0;
+		transform: rotate(22.5deg);
+		transform-origin: 100% 100%;
+		clip-path: polygon(100% 0, 100% 100%, 0 100%);
+		z-index: -1;
+		@include overlay(true, auto, 0, $space-1, auto);
+		@include box(350px);
+	}
+
+	&--image {
+		background: url('/assets/404.png') 50% / 100% no-repeat;
+		@include box(100%);
+	}
+
+	&--cta {
+		justify-self: end;
+	}
+}

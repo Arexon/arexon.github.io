@@ -1,0 +1,78 @@
+.header {
+	grid-area: 1 / 1 / 2 / 2;
+	display: grid;
+	grid-template: 60px 1fr 60px / 1fr 1fr;
+	align-items: center;
+	gap: $space-4;
+	padding: 0 $space-2;
+	overflow-y: hidden;
+	@include box(100%);
+	@include noSelection;
+
+	&.is-open {
+		overflow-y: scroll;
+	}
+
+	@include desktopScreen {
+		padding: 0 $space-4;
+	}
+
+	&--logo {
+		grid-column: 1 / 2;
+		
+		@include desktopScreen {
+			grid-area: 1 / 1 / 2 / 2;
+		}
+	}
+
+	&--navToggle {
+		grid-column: 2 / 3;
+		justify-self: end;
+		
+		@include desktopScreen {
+			display: none;
+		}
+	}
+
+	&--nav {
+		grid-area: 2 / 1 / 3 / 3;
+		align-self: start;
+		transition: opacity .8s $curve-circ;
+		@include flex($direction: column);
+
+		&--item {
+			color: $color-neutral-3;
+			font-size: $size-4;
+			text-transform: uppercase;
+			transition: transform .25s $curve-quart;
+
+			&:hover, &.is-active {
+				color: $color-secondary-1;
+			}
+			
+			@include desktopScreen {
+				font-size: $size-1;
+			}
+		}
+
+		@include desktopScreen {
+			grid-area: 1 / 2 / 2 / 3;
+			display: grid;
+			align-items: center;
+			grid-auto-flow: column;
+			gap: 0 $space-2;
+			justify-self: end;
+			height: 100%;
+			opacity: 1;
+		}
+	}
+
+	&--socialLinks {
+		grid-area: 3 / 1 / 4 / 3;
+		font-size: $size-1;
+
+		@include desktopScreen {
+			display: none;
+		}
+	}
+}

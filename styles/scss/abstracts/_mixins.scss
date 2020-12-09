@@ -1,0 +1,94 @@
+/* Layout */
+@mixin flex($justify: normal, $align: normal, $direction: row) {
+	display: flex;
+
+	justify-content: $justify;
+	align-items: $align;
+	flex-direction: $direction;
+}
+
+
+@mixin box($width, $height: $width) {
+	width: $width;
+	height: $height;
+}
+
+
+@mixin overlay(
+	$overlay: false,
+	$top: 0,
+	$right: 0,
+	$bottom: 0,
+	$left: 0
+) {
+	@if $overlay == true {
+		content: '';
+		position: absolute;
+	}
+
+	top: $top;
+	right: $right;
+	bottom: $bottom;
+	left: $left;
+}
+
+
+
+
+/* Color */
+@mixin monotone($color1, $color2) {
+	&::before {
+		background: $color1;
+		mix-blend-mode: darken;
+		@include overlay($overlay: true);
+		@include box(100%);
+	}
+	&::after {
+		background: $color2;
+		mix-blend-mode: lighten;
+		@include overlay($overlay: true);
+		@include box(100%);
+	}
+}
+
+
+
+
+/* Vector */
+@mixin vector($width, $height: $width) {
+	width: $width;
+	height: $height;
+	@include flex(center, center);
+}
+
+
+
+
+/* Typography */
+@mixin font($size, $weight, $style: normal) {
+	font-size: $size;
+	font-weight: $weight;
+	font-style: $style;
+}
+
+
+@mixin noSelection {
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+
+
+
+/* Media queries */
+@mixin desktopScreen($orientation: portrait) {
+	@if $orientation == portrait {
+		@media screen and (min-width: 980px) {
+			@content;
+		}
+	} @else {
+		@media screen and (min-width: 980px), (orientation: landscape) {
+			@content;
+		}
+	}
+}
