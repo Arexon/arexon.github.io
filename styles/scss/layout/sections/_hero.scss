@@ -2,14 +2,15 @@
 	margin: 0;
 	box-sizing: content-box;
 	background: $color-secondary-1 url('/assets/hero.png') center / 400px no-repeat;
-	overflow: hidden scroll;
 	@include flex(center, center, column);
 	@include box(100%);
 
 	@include desktopScreen(landscape) {
-		&--con {
-			@include flex(center, flex-end, row);
-		}
+		padding: $space-4 0;
+	}
+
+	&--con {
+		@include flex(center, flex-start, column);
 	}
 
 	&--text {
@@ -43,11 +44,8 @@
 	}
 
 	&--cta {
-		margin-top: 110px;
-
 		@include desktopScreen(landscape) {
-			margin-top: 0;
-			margin-left: $space-3;
+			margin: $space-1;
 		}
 	}
 }
